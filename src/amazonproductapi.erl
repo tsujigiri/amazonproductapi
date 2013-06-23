@@ -36,7 +36,7 @@ do_rest_call(RequestMethod, Operation, Params, Config) ->
                    {"AWSAccessKeyId", Config#amazonproductapi_config.access_key},
                    {"AssociateTag", Config#amazonproductapi_config.associate_tag},
                    {"Version", "2011-08-01"},
-                   {"SearchIndex", "All"},
+                   {"SearchIndex", Config#amazonproductapi_config.search_index},
                    {"Condition", "All"},
                    {"ResponseGroup", "Images,ItemAttributes,Offers"},
                    {"Timestamp", make_date()}
